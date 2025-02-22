@@ -103,19 +103,26 @@ def extract_links_from_docx(docx_path):
 
 def create_doc(resume_text, filename="ATS_Optimized_Resume.docx"):
     print(type(resume_text))
-    filename = filename.split(".")[0]+ ".pdf"
+    # filename = filename.split(".")[0]+ ".pdf"
+    filename = filename.split(".")[0]+ ".docx"
+    
     # doc = Document()
     # doc.add_paragraph(resume_text)
     filepath = os.path.join("uploads", f"ATS_Optimized_{filename}")
     # with open(f"ATS_Optimized_{filename}.md", "w", encoding="utf-8") as file:
     #     file.write(resume_text)
         
-    pypandoc.convert_text(resume_text, "pdf", outputfile=filepath, format="md",extra_args=[
+    # pypandoc.convert_text(resume_text, "pdf", outputfile=filepath, format="md",extra_args=[
+    #         "--pdf-engine=pdflatex",
+    #         "--variable", "geometry:a4paper,margin=1in",  # Adjust margins
+    #         "--variable", "parskip=0.5em",  # Adjust paragraph spacing
+    #         "--variable", "parindent=0pt"   # Remove paragraph indentation
+    #     ])
+    pypandoc.convert_text(resume_text, "docx", outputfile=filepath, format="md",extra_args=[
             "--pdf-engine=pdflatex",
             "--variable", "geometry:a4paper,margin=1in",  # Adjust margins
             "--variable", "parskip=0.5em",  # Adjust paragraph spacing
             "--variable", "parindent=0pt"   # Remove paragraph indentation
-        ])
-    
+        ])    
     # doc.save(filepath)
     return filepath
