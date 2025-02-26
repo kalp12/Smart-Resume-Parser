@@ -168,7 +168,7 @@ def upload_resume_ats():
         return jsonify({"error": "Could not extract text from resume"}), 400
 
     result = analyze_resume_format(resume_text, links)
-    return jsonify({result})
+    return jsonify(result)
 
 
 @swag_from("swag/optimize_resume.yml")
