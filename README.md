@@ -49,9 +49,10 @@ npm start  # Run React app
 ```
 
 ## 📂 API Endpoints
-Endpoint	Method	Description
-/upload_resume_ats	POST	Upload a resume file for ATS Score, checking, Formatting Issues, Missing Sections and Suggestions
-/optimize_resume	POST	Upload a resume file to get the optimized AI-enhanced resume in DOCX/PDF
-​/upload_resume POST Upload a resume to get extracted text, links and info from AI
-​/upload_resume_jd POST Upload a resume with Job Description to get analysis and provide feedback 
-​/query POST Ask a question and get an AI-generated answer based on stored resumes
+```plaintext
+    Endpoint	            Method	     Description
+    /upload_resume_ats	  POST	      Upload a resume file for ATS Score, checking, Formatting Issues, Missing Sections and Suggestions
+    /optimize_resume	   POST	      Upload a resume file to get the optimized AI-enhanced resume in DOCX/PDF
+    ​/upload_resume        POST        Upload a resume to get extracted text, links and info from AI
+    ​/upload_resume_jd     POST        Upload a resume with Job Description to get analysis and provide feedback 
+    ​/query                POST        Ask a question and get an AI-generated answer based on stored resumes
