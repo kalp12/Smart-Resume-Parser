@@ -19,7 +19,7 @@ export default function ResumeChecker() {
     formData.append("resume", file);
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/check_resume", formData);
+      const response = await axios.post("http://127.0.0.1:5000/upload_resume_ats", formData);
       setResult(response.data);
     } catch (error) {
       alert("Error analyzing resume.");
@@ -62,6 +62,7 @@ export default function ResumeChecker() {
 
         {result && (
           <div className="result">
+            <h2>✅ ATS Score: {result.ats_compliant}%</h2>
             <h2>✅ ATS Score: {result.readability_score}%</h2>
             <h3>⚠️ Formatting Issues:</h3>
             <ul>{result.format_issues.map((issue, index) => <li key={index}>{issue}</li>)}</ul>
