@@ -62,7 +62,6 @@ export default function ResumeChecker() {
 
         {result && (
           <div className="result">
-            <h2>✅ ATS Score: {result.ats_compliant}%</h2>
             <h2>✅ ATS Score: {result.readability_score}%</h2>
             <h3>⚠️ Formatting Issues:</h3>
             <ul>{result.format_issues.map((issue, index) => <li key={index}>{issue}</li>)}</ul>
@@ -70,9 +69,11 @@ export default function ResumeChecker() {
             <ul>{result.missing_sections.map((section, index) => <li key={index}>{section}</li>)}</ul>
             <h3>💡 Suggestions:</h3>
             <ul>{result.suggestions.map((tip, index) => <li key={index}>{tip}</li>)}</ul>
+            
           </div>
         )}
       </div>
     </div>
   );
 }
+            // {/* <h2>✅ ATS Score: {result.ats_compliant}%</h2> */}

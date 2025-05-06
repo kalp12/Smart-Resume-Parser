@@ -168,6 +168,7 @@ def upload_resume_ats():
         return jsonify({"error": "Could not extract text from resume"}), 400
 
     result = analyze_resume_format(resume_text, links)
+    print("result",result)
     return jsonify(result)
 
 

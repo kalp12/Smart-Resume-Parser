@@ -5,3 +5,13 @@ python-docx
 spacy
 werkzeug
 flasgger
+fitz
+pypandoc
+tools
+scikit-learn
+ollama
+google-generativeai
+google-genai
+faiss-cpu
+sentence-transformers
+dotenv

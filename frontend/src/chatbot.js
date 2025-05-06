@@ -38,19 +38,24 @@ export default function Chatbot() {
 
   const streamResponse = async (fullText) => {
     let responseText = "";
+  
     for (let i = 0; i < fullText.length; i++) {
       responseText += fullText[i];
-      await new Promise((resolve) => setTimeout(resolve, 10)); // Simulated response streaming
+      await new Promise((resolve) => setTimeout(resolve, 10));
+  
       setMessages((prev) => {
-        let updated = [...prev];
-        let botIndex = updated.findIndex((msg) => msg.sender === "bot" && msg.text === ""); // Find the bot message being updated
-        if (botIndex !== -1) {
-          updated[botIndex] = { text: responseText, sender: "bot", timestamp: new Date() };
+        const updated = [...prev];
+        // Replace the last bot message instead of searching
+        if (updated[updated.length - 1]?.sender === "bot") {
+          updated[updated.length - 1].text = responseText;
+        } else {
+          updated.push({ text: responseText, sender: "bot", timestamp: new Date() });
         }
         return updated;
       });
     }
   };
+  
 
   const sendMessage = async () => {
     if (!input.trim()) return;
