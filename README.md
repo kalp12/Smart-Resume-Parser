@@ -14,28 +14,19 @@ This tool helps users **analyze resumes for ATS compliance** and **provides chat
 ## 📸 Demo
 
 ### Optimize Resume
-![Optimize_resume](./assets/optimize_resume_1.png)
-![Optimize_resume](./assets/optimize_resume_2.png)
+<img src="./assets/optimize_resume_1.png" alt="Preview" width="600" height="400">
+<img src="./assets/optimize_resume_2.png" alt="Preview" width="600" height="400">
 
 ## 🎥 Video Walkthrough
 
 ### Resume Data Extraction
-<video width="600" controls>
-  <source src="assets/resume data extraction_1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/bdc3e27c-99b0-47c4-9677-44424e044634
 
 ### Resume Analysis with Job Description
-<video width="600" controls>
-  <source src="assets/resume analysis with job description_1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/50815034-1008-4f51-9d6d-dfca8b13af19
 
 ### ATS score checker and chatbot
-<video width="600" controls>
-  <source src="assets/ats score + chatbot_1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/bdc3e27c-99b0-47c4-9677-44424e044634
 
 ## ⚙️ Tech Stack
 ### **Frontend (React.js)**
