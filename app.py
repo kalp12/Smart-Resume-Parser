@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, send_file
+from flask import Flask, jsonify, request, send_file ,send_from_directory
 from flask_cors import CORS
 from flasgger import Swagger, swag_from
 from utils.file_handler import create_doc, process_resume_file
@@ -53,7 +53,7 @@ def upload_check_file():
 
 
 @app.route("/upload_resume", methods=["POST"])
-@swag_from("swag/upload_resume.yml")  # Ensure correct path to the YAML file
+@swag_from("swag/upload_resume.yml")
 def upload_resume():
     """Upload and analyze a resume"""
     if "file" not in request.files:
@@ -195,6 +195,9 @@ def optimize_resume():
     # "download_url": send_file(optimized_resume_path, as_attachment=True),
     return jsonify({"download_url": optimized_resume_path, "explanation": explanation})
 
+@app.route('/uploads/<path:filename>')
+def download_file(filename):
+    return send_from_directory('uploads', filename, as_attachment=True)
 
 if __name__ == "__main__":
     app.run(debug=True)

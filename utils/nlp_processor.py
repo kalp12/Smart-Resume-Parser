@@ -190,6 +190,10 @@ def generate_ats_friendly_resume(resume_text,links):
         - Keep structure clean and concise
         - Match links with text: If a platform like GitHub, LinkedIn, or email is mentioned in the resume, use the corresponding link from the provided links.
         - Make sure it is well-structured and matches the standard resume format.
+              
+        **Return your response in two parts separated by `---`:**
+        1. The formatted resume in markdown.
+        2. A section titled "Key Improvements and Explanations" explaining the changes and their benefits for ATS compatibility.
                 
         Resume text:
         ```markdown

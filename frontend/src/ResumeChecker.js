@@ -76,4 +76,3 @@ export default function ResumeChecker() {
     </div>
   );
 }
-            // {/* <h2>✅ ATS Score: {result.ats_compliant}%</h2> */}
