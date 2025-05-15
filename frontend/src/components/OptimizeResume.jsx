@@ -8,15 +8,15 @@ export default function OptimizeResume() {
 
   const handleFileUpload = (e) => setFile(e.target.files[0]);
   // Create a blob from the resume text and trigger download
-  const downloadOptimizedResume = () => {
-    const blob = new Blob([result.download_url], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "Optimized_Resume.docx";
-    a.click();
-    URL.revokeObjectURL(url); // clean up
-  };
+  // const downloadOptimizedResume = () => {
+  //   const blob = new Blob([result.download_url], { type: "text/plain" });
+  //   const url = URL.createObjectURL(blob);
+  //   const a = document.createElement("a");
+  //   a.href = url;
+  //   a.download = "Optimized_Resume.docx";
+  //   a.click();
+  //   URL.revokeObjectURL(url); // clean up
+  // };
   
   const getDownloadUrl = (path) => {
     const sanitized = path.replace(/\\/g, "/"); // Convert backslashes to forward slashes
