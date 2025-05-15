@@ -20,7 +20,7 @@ This tool helps users **analyze resumes for ATS compliance** and **provides chat
 ## 🎥 Video Walkthrough
 
 ### Resume Data Extraction
-https://github.com/user-attachments/assets/bdc3e27c-99b0-47c4-9677-44424e044634
+https://github.com/user-attachments/assets/3f322655-2265-45b2-802c-7ae04b110850
 
 ### Resume Analysis with Job Description
 https://github.com/user-attachments/assets/50815034-1008-4f51-9d6d-dfca8b13af19
