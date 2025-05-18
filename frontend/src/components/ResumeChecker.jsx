@@ -142,7 +142,7 @@ export default function ResumeChecker() {
     formData.append("resume", file);
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/upload_resume_ats", formData);
+      const response = await axios.post("https://smart-resume-parser.onrender.com/upload_resume_ats", formData);
       setResult(response.data);
       toast.success("Resume analyzed successfully!");
     } catch (err) {

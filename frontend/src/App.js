@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useEffect, useRef } from "react";
 import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Tools from "./tools";
 import ResumeCheckerPage from "./components/ResumeCheckermainpage";
+import axios from "axios";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -27,6 +28,15 @@ function HomePage() {
 }
 
 function App() {
+
+  useEffect(() => {
+    console.log("App mounted started");
+    const interval = setInterval(() => {
+      axios.get("https://smart-resume-parser.onrender.com/greet?name=John").catch(() => {});
+    }, 10 * 60 * 1000); 
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-green-100 to-blue-100 flex flex-col items-center">

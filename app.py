@@ -21,7 +21,8 @@ CORS(app)
 vector_db = ResumeVectorDB()
 
 UPLOAD_FOLDER = "uploads"
-# os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 # Initialize Swagger
 swagger = Swagger(app)
