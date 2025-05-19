@@ -109,6 +109,7 @@ def create_doc(resume_text, filename="ATS_Optimized_Resume.docx"):
     # doc = Document()
     # doc.add_paragraph(resume_text)
     filepath = os.path.join("uploads", f"ATS_Optimized_{filename}")
+    # upload_file_to_cloudinary(file)
     # with open(f"ATS_Optimized_{filename}.md", "w", encoding="utf-8") as file:
     #     file.write(resume_text)
         

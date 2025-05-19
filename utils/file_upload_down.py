@@ -30,14 +30,9 @@ def split_cloudinary_pdf_url(url):
     
 def download_and_process_resume_from_url(file_url, layout,ext):
     print("File URL",file_url)
-    # base_url, _,
-    print("Base URL", ext)
     if not layout:
         layout = "false"
     filename = str(split_cloudinary_pdf_url(file_url)) + str(ext)
-    print("File name",filename)
-    # filename = os.path.basename(file_url)
-    print("File name",filename)
     try:
         response = requests.get(file_url)
         print("Response",response)
@@ -45,7 +40,6 @@ def download_and_process_resume_from_url(file_url, layout,ext):
         if response.status_code != 200:
             raise ValueError("Failed to download file")
 
-        # extension = os.path.splitext(file_url)[1].lower()
         extension = ext
         if extension not in [".pdf", ".docx"]:
             raise ValueError("Unsupported file format")

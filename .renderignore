@@ -2,3 +2,9 @@ frontend
 assets
 .git
 .gitattributes
+uploads
+.gitignore
+ATS_Optimized_Resume.pdf
+README.md
+resume.md
+resume_index.pkl
