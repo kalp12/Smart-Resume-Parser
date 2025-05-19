@@ -16,3 +16,5 @@ faiss-cpu
 sentence-transformers
 dotenv
 gunicorn
+cloudinary
+python-dotenv

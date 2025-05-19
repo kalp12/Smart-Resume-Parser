@@ -14,9 +14,10 @@ export default function ExtractRelevantData() {
     setLoading(true);
     const formData = new FormData();
     formData.append("file", file); 
-
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+    // console.log("API_BASE_URL", API_BASE_URL);
     try {
-      const response = await axios.post("http://127.0.0.1:5000/upload_resume", formData);
+      const response = await axios.post(`${API_BASE_URL}upload_resume`, formData);
       setResult(response.data);
     } catch {
       alert("Error extracting data.");
